@@ -4,22 +4,6 @@
 	position:relative;
 }
 
-.App-header {
-  min-height: 150px;
-  padding: 20px;
-  color: #0088CB;
-}
-
-.menubar {
-  height: 60px;
-  color: white;
-  background:#dee2e6;
-}
-.menubar-item {
-  padding:10px;
-  font-size: 20px;
-}
-
 .App-title {
   font-size: 1.5em;
 }
@@ -28,11 +12,52 @@
   font-size: large;
 }
 
+/* header */
+.App-header {
+  min-height: 150px;
+  padding: 20px;
+  color: #0088CB;
+}
+
+/* menubar */
+.menubar {
+  height: 60px;
+  color: white;
+  background:#dee2e6;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.menubar-item {
+  padding:10px;
+  font-size: 20px;
+}
+
+.navbar-toggler {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 765px) {
+  .collapse.show {
+    display: block;
+    margin-top: 12px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+  }
+  .collapsing {
+    margin-top: 12px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+  }
+}
+
+
+/* main */
 .main {
   padding:10px;
   padding-bottom:30px;   /* Height of the footer */
 }
 
+/* footer */
 .footer {
   position:absolute;
   bottom:0;
@@ -40,3 +65,4 @@
   min-height:30px;   /* Height of the footer */
   background:#dee2e6;
 }
+

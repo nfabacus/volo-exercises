@@ -5,8 +5,9 @@ class Header extends Component {
     return (
       <div>
         <header className="App-header">
-          <h1>Abacus x Maths Learning</h1>
-          <h3>Excellence, Diligence, Creativity – The Abacus Course for Children 4 to 11 years olds</h3>
+          <h1>Abacus Learning Lab</h1>
+          <h4>Excellence, Diligence, Creativity</h4>
+          <p>Online Abacus Maths Course for Children 4 to 11 years olds</p>
         </header>
       </div>
     )

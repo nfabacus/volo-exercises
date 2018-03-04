@@ -37,6 +37,9 @@ export default class Menubar extends Component {
               <Link to="/">Home</Link>
             </NavItem>
             <NavItem className="menubar-item">
+              <Link to="/misson">Misson</Link>
+            </NavItem>
+            <NavItem className="menubar-item">
               <Link to="/about">About</Link>
             </NavItem>
           </Nav>
