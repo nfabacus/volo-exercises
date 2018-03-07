@@ -29,21 +29,7 @@ export default class Menubar extends Component {
   }
   render() {
     return (
-      <div className="menubar">
-          <div className="menubar-link-group">
-              <Link className="menubar-link-item" to="/">Home</Link>
-
-              <Link className="menubar-link-item" to="/misson">Misson</Link>
-
-              <Link className="menubar-link-item" to="/about">About</Link>
-          </div>
-          <div
-            className="menubar-btn"
-            onClick={this.toggle}
-          >
-            Menu
-          </div>
-        
+      <div>
         {
           this.state.isOpen&&
           <div className="menubar-modal">
@@ -65,6 +51,21 @@ export default class Menubar extends Component {
             </Nav>
           </div>
         }
+        <div className="menubar">
+            <div className="menubar-link-group">
+                <Link className="menubar-link-item" to="/">Home</Link>
+
+                <Link className="menubar-link-item" to="/misson">Misson</Link>
+
+                <Link className="menubar-link-item" to="/about">About</Link>
+            </div>
+            <div
+              className="menubar-btn"
+              onClick={this.toggle}
+            >
+              Menu
+            </div>
+        </div>
       </div>
     );
   }

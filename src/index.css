@@ -3,7 +3,13 @@ html, body, #root {
   padding:0;
   height:100%;
   font-family: sans-serif;
-  background-image: url("./assets/abacus.jpg")
+  background-image: url("./assets/abacus.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+	color:white;
 }
 
 p {

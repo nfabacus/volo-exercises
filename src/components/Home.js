@@ -1,80 +1,45 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { Parallax } from 'react-scroll-parallax'
-import Header from './Header'
+import Particles from 'react-particles-js'
 
-class Home extends React.Component {
-    render() {
-        return (
-          <div>
-            <Parallax
-              className="custom-class"
-              offsetYMax={20}
-              offsetYMin={-20}
-              slowerScrollRate
-              tag="figure"
-            >
-              <Header />
-            </Parallax>
-
-            <Parallax
-              className="custom-class"
-              offsetYMax={20}
-              offsetYMin={-20}
-              slowerScrollRate
-              tag="figure"
-            >
-              <div className="container">
-                <h4>
-                  Abacus x Maths Learning is a unique maths enrichment course, mainly aimed at primary school aged children. 
-                </h4>
-                <h4>
-                  Through the use of the Japanese Abacus and other materials, the course is designed to help children excel with their mental arithmetic, school maths, and even other subjects, by developing their concentration, reasoning, visualisation (creativity), and tenacity.
-                </h4>
-              </div>
-            </Parallax>
-            
-            <Parallax
-              className="custom-class"
-              offsetYMax={20}
-              offsetYMin={-20}
-              slowerScrollRate
-              tag="figure"
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-sm-12">
-                    <br />
-                    <p>With the use of the abacus, Abacus Maths Learning Course aims to help children…​​​​​​​​​​​</p>
-                    <div>
-                      <p
-                      >Develop cognitive skills (Concentration, attention, visualisation, auditory processing, and logic).</p>
-                      <p>Develop ability to search, recognise, and understand patterns, processes, and their relationships for solving problems.</p>
-                      <p>Internalise basic maths facts, patterns, processes, and their relationships.</p>
-                      <p>Develop tenacity (which some people call "GRIT").</p>
-                    </div>
-                    <br />
-                    <p>These are knowledge, skills, abilities, and creativity essential for learning and life.
-                    For this aim, the Abacus Maths Learning Course will continue to research and endeavour to improve its teaching methods and materials.</p>
-                  </div>
-                </div>
-              </div>
-            </Parallax>
-
-            <Parallax
-              className="custom-class"
-              offsetYMax={20}
-              offsetYMin={-20}
-              slowerScrollRate
-              tag="figure"
-            >
-              © 2018 by Abacus Maths Learning Course. All rights reserved.
-            </Parallax>
+const Home = (props)=>{
+    return (
+      <div>
+          <Particles 
+            params={{
+              particles: {
+                line_linked: {
+                  shadow: {
+                    enable: true,
+                    color: "#3CA9D1",
+                    blur: 5
+                  }
+                }
+              }
+            }}
+            style={ {width:'100%', position: "absolute", left: 0, top: 0 }}
+          />
+        <div className="container-fluid">
+          <div className="container">
+            <div className="jumbotron title-area">
+              <h1 className="display-3">Abacus Learning Lab</h1>
+              <p className="lead">Abacus Learning Lab is a unique online platform where we explore methods and techniques for children to learn basic numeracy and maths, in particular with the use of Japanese abacus concepts.</p>
+              <hr className="my-4" />
+              <p className="lead">
+                <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+              </p>
+            </div>
           </div>
-        )
-    }
+        </div>
+        <div className="container-fluid">
+          <div className="container">
+            <h4>
+            Through the use of the Japanese Abacus and other materials, our course aims to help children excel with their mental arithmetic, school maths, and even other subjects, by developing their concentration, reasoning, visualisation (creativity), and tenacity.
+            </h4>
+          </div>
+        </div>
+      </div>
+    )
 }
-
 
 export default Home
 

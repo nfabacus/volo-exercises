@@ -61,10 +61,12 @@
 .menubar {
   width: 100%;
   height: 50px;
+  position:absolute;
   color: white;
   background:rgba(222, 226, 230, 0.8);
   padding-left: 0px;
   padding-right: 0px;
+  z-index:1;
 }
 
 .menubar-link-group {
@@ -72,8 +74,8 @@
 }
 
 .menubar-link-item {
-  padding: 20px 40px 10px 40px;
-  font-size:20px;
+  padding: 20px 5% 10px 5%;
+  font-size: 20px;
 }
 
 .menubar-btn {
@@ -81,6 +83,7 @@
   position: absolute;
   right: 15px;
   top: 13px;
+  z-index:1;
 }
 
 .menubar-item {
@@ -92,12 +95,17 @@
   height: 100%;
   position: absolute;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: white;
   width: 100%;
   padding:10%;
   animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
+/*---- menu button icon ----*/
+
+
+
 
 /**
  * ----------------------------------------
@@ -115,10 +123,21 @@
   }
 }
 
-
-
 /* main */
+.title-area {
+  background-color: transparent;
+}
 
+.lead {
+  font-size: 1.6rem;
+}
+
+.main {
+  padding-top:150px;
+}
+.container-fluid {
+  padding:0;
+}
 
 /* footer */
 .footer {
