@@ -1,17 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Parallax } from 'react-scroll-parallax'
 import Header from './Header'
 
 class Home extends React.Component {
     render() {
         return (
           <div>
-            <div
+            <Parallax
+              className="custom-class"
+              offsetYMax={20}
+              offsetYMin={-20}
+              slowerScrollRate
+              tag="figure"
             >
               <Header />
-            </div>
+            </Parallax>
 
-            <div
+            <Parallax
+              className="custom-class"
+              offsetYMax={20}
+              offsetYMin={-20}
+              slowerScrollRate
+              tag="figure"
             >
               <div className="container">
                 <h4>
@@ -21,9 +32,14 @@ class Home extends React.Component {
                   Through the use of the Japanese Abacus and other materials, the course is designed to help children excel with their mental arithmetic, school maths, and even other subjects, by developing their concentration, reasoning, visualisation (creativity), and tenacity.
                 </h4>
               </div>
-            </div>
+            </Parallax>
             
-            <div
+            <Parallax
+              className="custom-class"
+              offsetYMax={20}
+              offsetYMin={-20}
+              slowerScrollRate
+              tag="figure"
             >
               <div className="container">
                 <div className="row">
@@ -43,12 +59,17 @@ class Home extends React.Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </Parallax>
 
-            <div
+            <Parallax
+              className="custom-class"
+              offsetYMax={20}
+              offsetYMin={-20}
+              slowerScrollRate
+              tag="figure"
             >
               © 2018 by Abacus Maths Learning Course. All rights reserved.
-            </div>
+            </Parallax>
           </div>
         )
     }

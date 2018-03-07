@@ -3,7 +3,6 @@ html, body, #root {
   padding:0;
   height:100%;
   font-family: sans-serif;
-  overflow: hidden;
   background-image: url("./assets/abacus.jpg")
 }
 
