@@ -16,45 +16,111 @@
 .App-header {
   min-height: 150px;
   padding: 20px;
-  color: #0088CB;
+  color: white;
+  position:relative;
+  background-color: black;
+}
+
+.focus-in-contract-bck {
+	animation: focus-in-contract-bck 1s linear forwards;
+}
+
+/**
+ * ----------------------------------------
+ * animation focus-in-contract-bck
+ * ----------------------------------------
+ */
+ @keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* ripple effect */
+.ripple {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.ripple-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 99px;
+  position: absolute;
+  border: 1px solid green;
 }
 
 /* menubar */
 .menubar {
-  height: 60px;
+  width: 100%;
+  height: 50px;
   color: white;
-  background:#dee2e6;
+  background:rgba(222, 226, 230, 0.8);
   padding-left: 0px;
   padding-right: 0px;
 }
+
+.menubar-link-group {
+  padding:10px;
+}
+
+.menubar-link-item {
+  padding: 20px 40px 10px 40px;
+  font-size:20px;
+}
+
+.menubar-btn {
+  color: black;
+  position: absolute;
+  right: 15px;
+  top: 13px;
+}
+
 .menubar-item {
   padding:10px;
   font-size: 20px;
 }
 
-.navbar-toggler {
-  margin-left: 10px;
+.menubar-modal {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  padding:10%;
+  animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@media only screen and (max-width: 765px) {
-  .collapse.show {
-    display: block;
-    margin-top: 12px;
-    background-color: white;
-    border: 1px solid #dee2e6;
+/**
+ * ----------------------------------------
+ * animation slide-in-fwd-center
+ * ----------------------------------------
+ */
+ @keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
   }
-  .collapsing {
-    margin-top: 12px;
-    background-color: white;
-    border: 1px solid #dee2e6;
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
   }
 }
+
 
 
 /* main */
 .main {
-  padding:10px;
-  padding-bottom:30px;   /* Height of the footer */
+  overflow-y: 'hidden';
 }
 
 /* footer */
