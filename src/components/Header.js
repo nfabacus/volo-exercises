@@ -23,7 +23,7 @@ class Header extends Component {
           />
           <h1>Abacus Learning Lab</h1>
           <h4>Excellence, Diligence, Creativity</h4>
-          <p>Online Abacus Maths Course for Children 4 to 11 years olds</p>
+          <h3>Online Abacus Maths Course for Children 5 to 11 years olds</h3>
         </header>
       </div>
     )
