@@ -30,11 +30,25 @@ const Home = (props)=>{
             </div>
           </div>
         </div>
-        <div className="container-fluid">
+        <div className="container-fluid block-row bg-blueviolet">
           <div className="container">
             <h4>
             Through the use of the Japanese Abacus and other materials, our course aims to help children excel with their mental arithmetic, school maths, and even other subjects, by developing their concentration, reasoning, visualisation (creativity), and tenacity.
             </h4>
+          </div>
+        </div>
+        <div className="container-fluid block-row bg-white color-grey">
+          <div className="container">
+            <p>With the use of the abacus, Abacus Maths Learning Course aims to help children…​​​​​​​​​​​</p>
+            <ul className="list">
+              <li className="list-item">Develop cognitive skills (Concentration, attention, visualisation, auditory processing, and logic).</li>
+              <li className="list-item">Develop ability to search, recognise, and understand patterns, processes, and their relationships for solving problems.</li>
+              <li className="list-item">Internalise basic maths facts, patterns, processes, and their relationships.</li>
+              <li className="list-item">Develop tenacity (which some people call "GRIT").</li>
+            </ul>
+            <br />
+            <p>These are knowledge, skills, abilities, and creativity essential for learning and life.
+            For this aim, the Abacus Maths Learning Course will continue to research and endeavour to improve its teaching methods and materials.</p>
           </div>
         </div>
       </div>
