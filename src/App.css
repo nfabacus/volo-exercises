@@ -77,6 +77,7 @@ a.menubar-link-item {
   padding: 20px 5% 10px 5%;
   font-size: 20px;
   text-decoration: none;
+  color: blueviolet;
 }
 
 .menubar-btn {
@@ -235,12 +236,45 @@ a.menubar-link-item {
 }
 
 /*----block-row------*/
-.block-row {
+.block-row, .slope-open-right {
   min-height: 400px;
   display: flex;
   align-items: center;
   text-align: left;
   padding: 80px 0;
+  position:relative;
+}
+
+.slope-open-right:before {
+  content: '';
+  position: absolute;
+  border-bottom: 100px solid blueviolet;
+  border-left: 98.8vw solid transparent;
+  top: -100px;
+}
+.slope-open-right:after {
+  content: '';
+  position: absolute;
+  border-top: 100px solid blueviolet;
+  border-left: 98.8vw solid transparent;
+  bottom: -100px;
+  z-index:1;
+}
+
+.slope-open-left:before {
+  content: '';
+  position: absolute;
+  border-bottom: 100px solid white;
+  border-right: 98.8vw solid transparent;
+  top: -100px;
+}
+.slope-open-left:after {
+  content: '';
+  position: absolute;
+  border-top: 100px solid white;
+  border-right: 98.8vw solid transparent;
+  bottom: -100px;
+  z-index:1;
 }
 
 .list {
@@ -248,6 +282,18 @@ a.menubar-link-item {
   text-align: left;
   font-size: x-large;
   padding: 15px 10px;
+}
+
+.list-item {
+  padding: 5px 0px 5px 0px;
+}
+
+.bullet-point {
+  width: 12px;
+  height: 12px;
+  background-color: #909090;
+  display: inline-block;
+  margin: 0px 10px 3px 0px;
 }
 
 /* footer */
@@ -266,6 +312,40 @@ a.menubar-link-item {
 
 .bg-white {
   background-color: white;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-abacus1 {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: sans-serif;
+  background-image: url("./assets/abacus1.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+  color:white;
+  position:relative;
+}
+
+.bg-abacus2 {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: sans-serif;
+  background-image: url("./assets/abacus2.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+  color:white;
+  position:relative;
 }
 /*----------------------------*/
 
