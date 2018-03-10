@@ -24,6 +24,10 @@ export default class Menubar extends Component {
   toggle=()=>{
     this.setState({
       isOpen: !this.state.isOpen
+    },()=>{
+      if(this.state.isOpen){
+        window.scrollTo(0,0)
+      }
     });
   }
 
@@ -46,7 +50,7 @@ export default class Menubar extends Component {
         </div>
         {
           this.state.isOpen&&
-          <div className="menubar-modal">
+          <div className="menubar-modal" ref={node=>this.node = node}>
             <Nav className="m-auto" navbar>
               <NavItem className="menubar-item focus-in-contract-bck">
                 <Link onClick={this.toggle} to="/">Home</Link>

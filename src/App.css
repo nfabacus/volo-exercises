@@ -74,20 +74,42 @@
 }
 
 a.menubar-link-item {
-  padding: 20px 5% 10px 5%;
+  padding: 10px 3% 10px 3%;
   font-size: 20px;
   text-decoration: none;
   color: blueviolet;
+  margin: 4%;
+}
+a.menubar-link-item:hover {
+  background-color: rgba(248, 249, 250, 0.5);
+  box-shadow: 5px 2px 5px #00000036;
+  transition: background-color 1s, box-shadow 1s;
+}
+a.menubar-link-item:focus {
+  background-color: rgba(248, 249, 250, 0.5);
+  box-shadow: 5px 2px 5px #00000036;
+  transition: background-color 1s, box-shadow 1s;
+}
+
+@media only screen and (max-width: 600px) {
+  a.menubar-link-item {
+      display:none;
+  }
 }
 
 .menubar-btn {
   color: black;
   position: fixed;
   right: 15px;
-  top: 7px;
+  top: 9px;
   z-index:3;
-  height:35px;
-  width:35px;
+  height:33px;
+  width:33px;
+}
+@media only screen and (min-width: 601px) {
+  .menubar-btn {
+      display:none;
+  }
 }
 
 .hamburger {
@@ -95,7 +117,7 @@ a.menubar-link-item {
 }
 
 .hamburger span:nth-child(1) {
-  border: 2px solid #ffffff;
+  border: 2px solid blueviolet;
   position: absolute;
   top: 0px;
   left: 0;
@@ -103,23 +125,23 @@ a.menubar-link-item {
 }
 
 .hamburger span:nth-child(2) {
-  border: 2px solid #ffffff;
+  border: 2px solid blueviolet;
   position: absolute;
-  top: 15px;
+  top: 13px;
   left: 0;
   width: 100%;
 }
 
 .hamburger span:nth-child(3) {
-  border: 2px solid #ffffff;
+  border: 2px solid blueviolet;
   position: absolute;
-  top: 31px;
+  top: 27px;
   left: 0;
   width: 100%;
 }
 
 .cross span:nth-child(1) {
-  border: 2px solid black;
+  border: 2px solid blueviolet;
   position: absolute;
   top: 15px;
   left: -8px;
@@ -128,7 +150,7 @@ a.menubar-link-item {
 }
 
 .cross span:nth-child(2) {
-  border: 2px solid black;
+  border: 2px solid blueviolet;
   position: absolute;
   top: 15px;
   left: -7px;
@@ -185,6 +207,7 @@ a.menubar-link-item {
 
 .menubar-item a {
   text-decoration: none;
+  color: blueviolet;
 }
 
 .menubar-modal {
@@ -226,14 +249,55 @@ a.menubar-link-item {
 
 .lead {
   font-size: 1.6rem;
+  background-color: #8a2be28f;
+  padding: 10px;
+  margin-top: 50px;
 }
 
-.main {
-  padding-top:150px;
-}
 .container-fluid {
   padding:0;
 }
+
+.arrow-group {
+  position: relative;
+}
+
+.circle {
+  position:absolute;
+  width:45px;
+  height:45px;
+  border-radius: 30px;
+  background-color: rgba(0, 123, 255, 0.5490196078431373);
+}
+
+.down-arrow {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+.up-arrow {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
 
 /*----block-row------*/
 .block-row, .slope-open-right {
@@ -249,14 +313,24 @@ a.menubar-link-item {
   content: '';
   position: absolute;
   border-bottom: 100px solid blueviolet;
-  border-left: 98.8vw solid transparent;
+  border-left: 100vw solid transparent;
   top: -100px;
 }
 .slope-open-right:after {
   content: '';
   position: absolute;
   border-top: 100px solid blueviolet;
-  border-left: 98.8vw solid transparent;
+  border-left: 100vw solid transparent;
+  bottom: -100px;
+  z-index: 1;
+  right: 0;
+}
+
+.slope-open-right_white:after {
+  content: '';
+  position: absolute;
+  border-top: 100px solid white;
+  border-right: 100vw solid transparent;
   bottom: -100px;
   z-index:1;
 }
@@ -265,14 +339,14 @@ a.menubar-link-item {
   content: '';
   position: absolute;
   border-bottom: 100px solid white;
-  border-right: 98.8vw solid transparent;
+  border-right: 100vw solid transparent;
   top: -100px;
 }
 .slope-open-left:after {
   content: '';
   position: absolute;
   border-top: 100px solid white;
-  border-right: 98.8vw solid transparent;
+  border-right: 100vw solid transparent;
   bottom: -100px;
   z-index:1;
 }
@@ -306,6 +380,10 @@ a.menubar-link-item {
 }
 
 /*-----background colors ------*/
+.bg-translucent {
+  background-color: #17171745;
+}
+
 .bg-blueviolet {
   background-color: blueviolet;
 }
