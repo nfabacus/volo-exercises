@@ -263,11 +263,13 @@ a.menubar-link-item:focus {
 }
 
 .circle {
-  position:absolute;
-  width:45px;
-  height:45px;
+  position: fixed;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
   border-radius: 30px;
   background-color: rgba(0, 123, 255, 0.5490196078431373);
+  z-index: 2;
 }
 
 .down-arrow {
