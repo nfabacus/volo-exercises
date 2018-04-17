@@ -1,225 +1,117 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Particles from 'react-particles-js'
 import Scrollchor from 'react-scrollchor'
 
-const Course = (props)=>{
-    return (
-      <div className="home">
-          <Particles 
-            params={{
-              "particles": {
-                "number": {
-                  "value": 30,
-                  "density": {
-                    "enable": true,
-                    "value_area": 800
-                  }
-                },
-                "color": {
-                  "value": "#ffffff"
-                },
-                "shape": {
-                  "type": "circle",
-                  "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                  },
-                  "polygon": {
-                    "nb_sides": 5
-                  },
-                  "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                  }
-                },
-                "opacity": {
-                  "value": 0.5,
-                  "random": false,
-                  "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                  }
-                },
-                "size": {
-                  "value": 4.7,
-                  "random": true,
-                  "anim": {
-                    "enable": false,
-                    "speed": 19.489853095232284,
-                    "size_min": 1.6241544246026904,
-                    "sync": false
-                  }
-                },
-                "line_linked": {
-                  "enable": true,
-                  "distance": 150,
-                  "color": "#8bcdf9",
-                  "opacity": 0.4,
-                  "width": 1
-                },
-                "move": {
-                  "enable": true,
-                  "speed": 3,
-                  "direction": "none",
-                  "random": false,
-                  "straight": false,
-                  "out_mode": "out",
-                  "bounce": false,
-                  "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                  }
-                }
-              },
-              "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                  "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
-                  },
-                  "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                  },
-                  "resize": true
-                },
-                "modes": {
-                  "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                      "opacity": 1
-                    }
-                  },
-                  "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
-                  },
-                  "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                  },
-                  "push": {
-                    "particles_nb": 4
-                  },
-                  "remove": {
-                    "particles_nb": 2
-                  }
-                }
-              },
-              "retina_detect": true
-            }}
-            style={ {width:'100%', position: "absolute", left: 0, top: 0 }}
-          /> 
-        <div className="container-fluid block-row pb-5">
-          <div className="container">
-            <div className="jumbotron title-area">
-              <h1 className="display-3">Course</h1>
-              <p className="lead">Online platform which explores unique learning methods for numeracy and maths</p>
-              <hr className="my-4" />
-              <br />
-              <br />
-              <div className="text-center arrow-group mt-5">
-                <Scrollchor to="#mission" role="button"><span className="circle"><span className="down-arrow" ></span></span></Scrollchor>
+class Course extends Component {
+
+    state={
+      section: 0
+    }
+
+    handleScrollClick=()=>{
+      console.log("Clicked!", this.state.section)
+      const nextSection = this.state.section>=4?0:this.state.section+1
+      this.setState({ section: nextSection },()=>{
+        this.scrollchor.simulateClick()
+      })
+    }
+
+    render() {
+      console.log("this.state.section>>", this.state.section)
+      return (
+        <div>
+          <div className="text-center arrow-group" onClick={this.handleScrollClick}>
+            <div className="circle">
+              <span className={ this.state.section>=4?"up-arrow":"down-arrow" } >
+                <Scrollchor
+                  to={`#${this.state.section}`}
+                  role="button"
+                  ref={(ref)=>{this.scrollchor=ref}}
+                >
+                </Scrollchor>
+              </span>
+            </div>
+          </div>
+          <div 
+            id="0"
+            onMouseEnter={()=>{this.setState({ section: 0 })}}
+            className="container-fluid block-row">
+            <div className="container">
+              <div className="title-area">
+                <h1 className="display-3">Course</h1>
               </div>
             </div>
           </div>
-        </div>
-        <div id="mission" className="container-fluid block-row bg-blueviolet slope-open-right">
-          <div className="container">
-            <h2>Online Video Classes</h2>
-              <p>In particular, Abacus Maths Learning Course aims to help children:​​​​​​​​​​​</p>
-            <ul className="list">
-              <li className="list-item"><span className="bullet-point"></span>Develop cognitive skills (Concentration, attention, visualisation, auditory processing, and logic).</li>
-              <li className="list-item"><span className="bullet-point"></span>Develop ability to search, recognise, and understand patterns, processes, and their relationships for solving problems.</li>
-              <li className="list-item"><span className="bullet-point"></span>Internalise basic maths facts, patterns, processes, and their relationships.</li>
-              <li className="list-item"><span className="bullet-point"></span>Develop tenacity (which some people call "GRIT").</li>
-            </ul>
-            <br />
-            <p>These are knowledge, skills, abilities, and creativity essential for learning and life.
-            For this aim, we will continue to research and endeavour to improve its teaching methods and materials.</p>
+          <div
+            onMouseEnter={()=>{this.setState({ section: 1 })}}
+            id="1" className="container-fluid block-row bg-blueviolet slope-open-right"
+          >
+            <div className="container">
+              <h3>Online Learning Platform</h3>
+              <ul className="list">
+                <li className="list-item"><span className="bullet-point"></span>Allows children to learn and practise the abacus and maths in a structured way.</li>
+                <li className="list-item"><span className="bullet-point"></span>Each child can work through the levels at their own pace, with instant feedback given to progress their learning.</li>
+                <li className="list-item"><span className="bullet-point"></span>By combining use of the actual or on-screen abacus with a tablet or computer, children can practise their maths at home and in classroom environments.</li>
+                <li className="list-item"><span className="bullet-point"></span>Current platform is available from <a href="https://www.abacusmathslearning.com" target="_blank">here</a>.</li>
+                <li className="list-item"><span className="bullet-point"></span>Commencing the development of a new improved platform.</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="container-fluid block-row bg-abacus1">
-          <div className="container">
-            <div className="text-center arrow-group">
-              <Scrollchor to="#aims" role="button"><span className="circle"><span className="down-arrow" ></span></span></Scrollchor>
+          <div className="container-fluid block-row bg-abacus1">
+          </div>
+          <div
+            onMouseEnter={()=>{this.setState({ section: 2 })}}
+            id="2" className="container-fluid block-row slope-open-left bg-white color-grey"
+          >
+            <div className="container">
+              <h3>Online Video Classes</h3>
+              <ul className="list">
+                <li className="list-item"><span className="bullet-point"></span>Small Group (up to 10 students per session)​​</li>
+                <li className="list-item"><span className="bullet-point"></span>Video call session (WebRTC technology)</li>
+                <li className="list-item"><span className="bullet-point"></span>Abacus x Maths Learning Class brought to your kitchen table/living room via your convenient device</li>
+                <li className="list-item"><span className="bullet-point"></span>Device required. Laptop, tablet, smart TV and even smart phone could be used. Desktop can also be used (webcam, microphone, and speakers required). - technical requirements must be met to guarantee reliable call quality.</li>
+                <li className="list-item"><span className="bullet-point"></span>Good broadband connection is required.  WiFi required in case of tablets and other devices wirelessly connected to the internet.</li>
+                <li className="list-item"><span className="bullet-point"></span>Chrome or Firefox Browsers required for PC/laptop</li>
+                <li className="list-item"><span className="bullet-point"></span>A parent/guardian should accompany the child during the session and assist with their learning.</li>
+                <li className="list-item"><span className="bullet-point"></span>Currently available only on every Tuesday (5:30pm-6:30pm) - limited availablity.</li>
+              </ul>
+              <p>Please feel free to contact us if you need further information.</p>
+            </div>
+          </div>
+          <div className="container-fluid block-row">
+            <div className="container">
+            </div>
+          </div>
+          <div
+            onMouseEnter={()=>{this.setState({ section: 3 })}}
+            id="3" className="container-fluid block-row bg-blueviolet slope-open-right"
+          >
+            <div className="container">
+              <h3>What do children learn in this course?</h3>
+              <ul className="list">
+                <li className="list-item"><span className="bullet-point"></span>Maths for General Reasoning and Logical Thinking Skills (relationships between concrete objects, language, visual representations, and abstracts)</li>
+                <li className="list-item"><span className="bullet-point"></span>Times Tables with imagination – even 5 year olds can learn all the 1-10 times tables.</li>
+                <li className="list-item"><span className="bullet-point"></span>Master the foundation of +, -, x, ÷ using the abacus and its concepts. (Essential for Primary Education and Life)</li>
+                <li className="list-item"><span className="bullet-point"></span>Develop the habit of mental arithmetic without over-reliance on calculators.</li>
+                <li className="list-item"><span className="bullet-point"></span>Develop finger dexterity and hand-eye coordination.</li>
+                <li className="list-item"><span className="bullet-point"></span>Cognitive training with the use of the abacus (visual, auditory processing, attention/concentration)</li>
+                <li className="list-item"><span className="bullet-point"></span>Qualities such as perseverance, diligence, tenacity, along with confidence.</li>
+              </ul>
+              <p>Please feel free to contact us if you need further information.</p>
+            </div>
+          </div>
+          <div
+            onMouseEnter={()=>{this.setState({ section: 4 })}}
+            id="4"
+            className="container-fluid block-row">
+            <div className="container">
+              <br />
+              <p className="lead">© 2018 by Abacus Maths Learning Course. All rights reserved.</p>
             </div>
           </div>
         </div>
-        <div id="aims" className="container-fluid block-row slope-open-left bg-white color-grey">
-          <div className="container">
-            <p>In particular, Abacus Maths Learning Course aims to help children:​​​​​​​​​​​</p>
-            <ul className="list">
-              <li className="list-item"><span className="bullet-point"></span>Develop cognitive skills (Concentration, attention, visualisation, auditory processing, and logic).</li>
-              <li className="list-item"><span className="bullet-point"></span>Develop ability to search, recognise, and understand patterns, processes, and their relationships for solving problems.</li>
-              <li className="list-item"><span className="bullet-point"></span>Internalise basic maths facts, patterns, processes, and their relationships.</li>
-              <li className="list-item"><span className="bullet-point"></span>Develop tenacity (which some people call "GRIT").</li>
-            </ul>
-            <br />
-            <p>These are knowledge, skills, abilities, and creativity essential for learning and life.
-            For this aim, we will continue to research and endeavour to improve its teaching methods and materials.</p>
-          </div>
-        </div>
-        <div className="container-fluid block-row">
-          <div className="container">
-            <div className="text-center arrow-group">
-              <Scrollchor to="#theory" role="button"><span className="circle"><span className="down-arrow" ></span></span></Scrollchor>
-            </div>
-          </div>
-        </div>
-        <div id="theory" className="container-fluid block-row bg-blueviolet slope-open-right">
-          <div className="container">
-            <h2>Theory and Eight Petals</h2>
-            <h3>Theoretical Basis behind the Abacus Maths Learning</h3>
-            <h3>
-            ‘Our Understanding of the World is Relational, Relative, and Multi-fold.’
-            </h3>
-            <h3>
-              Our world is manifested and expressed in different ways.
-              Different expressions – some concrete and some abstract – are inter-related and relative to each other, describing our understanding of the world.
-
-              Helping children explore, understand and internalise this inter-relationship and relativity will give them the solid foundation and enrichment in their learning of maths, other subjects, and boost their general intelligence.
-
-              On the contrary, children who solely rely on their rote memory for the answer without understanding of the problem may not be able to solve the same question when expressed in different ways.
-            </h3>
-          </div>
-        </div>
-        <div id="eight-petals" className="container-fluid block-row slope-open-right_white bg-white color-grey">
-          <div className="container pt-5">
-            <br />
-            <br />
-            <h3>Yaē (Eight Petals) of the Abacus Maths Learning</h3>
-            <ul className="list">
-              <li className="list-item"><span className="bullet-point"></span>Exposure (to different expressions of problems)​​</li>
-              <li className="list-item"><span className="bullet-point"></span>Internalisation Exercise (by mnemonics and repetition)</li>
-              <li className="list-item"><span className="bullet-point"></span>Cognitive training (by use of visual, auditory, kinaesthetic senses through the Japanese Abacus)</li>
-              <li className="list-item"><span className="bullet-point"></span>Individual Learning (individual students working on their own learning speed.  Each child comes first before the group progress/targets in school)</li>
-              <li className="list-item"><span className="bullet-point"></span>Structured Learning  (Step by Step, clear learning objectives and levels)</li>
-              <li className="list-item"><span className="bullet-point"></span>Consistency/Perseverance  (Recognition by Abacus Teacher, Parents and Children that learning the Abacus Maths is like running a marathon or learning piano.  Be the tortoise than the hare.)</li>
-              <li className="list-item"><span className="bullet-point"></span>Elements of Fun, Creativity, and Motivation (Without them, it is hard to last!)</li>
-              <li className="list-item"><span className="bullet-point"></span>Research into all areas and aspects of learning (to improve the efficiency of learning)  E.g. Group dynamics in learning, Peer to Peer learning.</li>
-            </ul>
-          </div>
-        </div>
-        <div className="container-fluid block-row">
-          <div className="container">
-            <div className="text-center arrow-group">
-              <Scrollchor to="#" role="button"><span className="circle"><span className="up-arrow" ></span></span></Scrollchor>
-            </div>
-            <br />
-            <p className="lead">© 2018 by Abacus Maths Learning Course. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    )
+      )
+    }
 }
 
 export default Course

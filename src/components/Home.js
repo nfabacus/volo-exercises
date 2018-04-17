@@ -19,9 +19,9 @@ class Home extends Component {
     render() {
       console.log("this.state.section>>", this.state.section)
       return (
-        <div className="home">
+        <div>
           <div className="text-center arrow-group" onClick={this.handleScrollClick}>
-            <span className="circle">
+            <div className="circle">
               <span className={ this.state.section>=5?"up-arrow":"down-arrow" } >
                 <Scrollchor
                   to={`#${this.state.section}`}
@@ -30,7 +30,7 @@ class Home extends Component {
                 >
                 </Scrollchor>
               </span>
-            </span>
+            </div>
           </div>
           <div 
             id="0"
@@ -84,19 +84,28 @@ class Home extends Component {
             id="3" className="container-fluid block-row bg-blueviolet slope-open-right"
           >
             <div className="container">
-              <h2>Theory and Eight Petals</h2>
-              <h3>Theoretical Basis behind the Abacus Maths Learning</h3>
-              <h3>
-              ‘Our Understanding of the World is Relational, Relative, and Multi-fold.’
-              </h3>
-              <h3>
-                Our world is manifested and expressed in different ways.
-                Different expressions – some concrete and some abstract – are inter-related and relative to each other, describing our understanding of the world.
-  
-                Helping children explore, understand and internalise this inter-relationship and relativity will give them the solid foundation and enrichment in their learning of maths, other subjects, and boost their general intelligence.
-  
-                On the contrary, children who solely rely on their rote memory for the answer without understanding of the problem may not be able to solve the same question when expressed in different ways.
-              </h3>
+              <div className="row">
+                <div className="col-sm-12">
+                  <h2>Theory and Eight Petals</h2>
+                  <h3>Theoretical Basis behind the Abacus Maths Learning</h3>
+                  <h3>
+                  ‘Our Understanding of the World is Relational, Relative, and Multi-fold.’
+                  </h3>
+                  <div className="mt-4">
+                    <img className="float-right m-2" style={{maxWidth: "95%"}} src={require('../assets/expressions.jpg')} alt="expression diagram" />
+                    <p>
+                      Our world is manifested and expressed in different ways.
+                      Different expressions – some concrete and some abstract – are inter-related and relative to each other, describing our understanding of the world.
+                    </p>
+                    <p>
+                      Helping children explore, understand and internalise this inter-relationship and relativity will give them the solid foundation and enrichment in their learning of maths, other subjects, and boost their general intelligence.
+                    </p>
+                    <p>
+                      On the contrary, children who solely rely on their rote memory for the answer without understanding of the problem may not be able to solve the same question when expressed in different ways.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div

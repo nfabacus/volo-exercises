@@ -59,7 +59,7 @@ export default class Menubar extends Component {
                 <Link  onClick={this.toggle} to="/course">Course</Link>
               </NavItem>
               <NavItem className="menubar-item focus-in-contract-bck">
-                <Link  onClick={this.toggle} to="/articles">Articles</Link>
+                <Link  onClick={this.toggle} to="/abacus">Abacus</Link>
               </NavItem>
               <NavItem className="menubar-item focus-in-contract-bck">
                 <Link  onClick={this.toggle} to="/contact">Contact</Link>
@@ -71,7 +71,7 @@ export default class Menubar extends Component {
             <div className="menubar-link-group">
                 <Link className="menubar-link-item" to="/">Home</Link>
                 <Link className="menubar-link-item" to="/course">Course</Link>
-                <Link className="menubar-link-item" to="/article">Article</Link>
+                <Link className="menubar-link-item" to="/abacus">Abacus</Link>
                 <Link className="menubar-link-item" to="/contact">Contact</Link>
             </div>
         </div>
