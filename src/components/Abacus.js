@@ -19,7 +19,7 @@ class Abacus extends Component {
     render() {
       console.log("this.state.section>>", this.state.section)
       return (
-        <div>
+        <div className="bg-abacus1">
           <div className="text-center arrow-group" onClick={this.handleScrollClick}>
             <div className="circle">
               <span className={ this.state.section>=3?"up-arrow":"down-arrow" } >
@@ -38,7 +38,7 @@ class Abacus extends Component {
             className="container-fluid block-row">
             <div className="container">
               <div className="title-area">
-                <h1 className="display-3">The Soroban Abacus</h1>
+                <h1 className="display-4">The Soroban Abacus</h1>
               </div>
             </div>
           </div>

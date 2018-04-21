@@ -26,12 +26,12 @@
  * ----------------------------------------
  */
 .focus-in-contract-bck {
-	animation: focus-in-contract-bck 1s linear forwards;
+	animation: focus-in-contract-bck .5s linear forwards;
 }
 @keyframes focus-in-contract-bck {
   0% {
     letter-spacing: 1em;
-    transform: translateZ(300px);
+    transform: translateZ(200px);
     filter: blur(12px);
     opacity: 0;
   }
@@ -102,7 +102,7 @@ a.menubar-link-item:focus {
   position: fixed;
   right: 15px;
   top: 9px;
-  z-index:3;
+  z-index:4;
   height:33px;
   width:33px;
 }
@@ -214,14 +214,12 @@ a.menubar-link-item:focus {
   height: 100%;
   position: absolute;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   background-color: white;
   width: 100%;
   padding:10%;
   animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-/*---- menu button icon ----*/
 
 
 
@@ -400,6 +398,21 @@ a.menubar-link-item:focus {
   background-color: transparent;
 }
 
+.bg-abacus {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: sans-serif;
+  background-image: url("./assets/abacus.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+  color:white;
+  position:relative;
+}
+
 .bg-abacus1 {
   margin:0;
   padding:0;
@@ -429,6 +442,97 @@ a.menubar-link-item:focus {
   color:white;
   position:relative;
 }
+
+.bg-abacus3 {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: sans-serif;
+  background-image: url("./assets/abacuskid_kid_with_tablet-min.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+  color:white;
+  position:relative;
+}
+
+.bg-abacus4 {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: sans-serif;
+  background-image: url("./assets/abacuskid_kid_with_tablet2-min.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+  color:white;
+  position:relative;
+}
+
+.bg-abacus5 {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: sans-serif;
+  background-image: url("./assets/abacuskid_kid_with_pc-min.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+  color:white;
+  position:relative;
+}
+
+.bg-abacus6 {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: sans-serif;
+  background-image: url("./assets/abacuskids-min.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+  color:white;
+  position:relative;
+}
+
+.bg-contact {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: sans-serif;
+  background-image: url("./assets/background1.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+  color:white;
+  position:relative;
+}
+
+.bg-instructor {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: sans-serif;
+  background-image: url("./assets/kimie_sensei.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin: 0%;
+  color:white;
+  position:relative;
+}
+
 /*----------------------------*/
 
 /*--------Font colors --------*/

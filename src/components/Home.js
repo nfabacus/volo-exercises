@@ -19,7 +19,7 @@ class Home extends Component {
     render() {
       console.log("this.state.section>>", this.state.section)
       return (
-        <div>
+        <div className="bg-abacus">
           <div className="text-center arrow-group" onClick={this.handleScrollClick}>
             <div className="circle">
               <span className={ this.state.section>=5?"up-arrow":"down-arrow" } >
@@ -38,7 +38,7 @@ class Home extends Component {
             className="container-fluid block-row pb-5">
             <div className="container">
               <div className="jumbotron title-area">
-                <h1 className="display-3">Abacus Learning Lab</h1>
+                <h1 className="display-4">Abacus Learning Lab</h1>
                 <p className="lead">Online platform which explores unique learning methods for numeracy and maths</p>
                 <br />
                 <br />
@@ -56,7 +56,7 @@ class Home extends Component {
               </h3>
             </div>
           </div>
-          <div className="container-fluid block-row bg-abacus1">
+          <div className="container-fluid block-row bg-abacus5">
           </div>
           <div
             onMouseEnter={()=>{this.setState({ section: 2 })}}
@@ -75,9 +75,7 @@ class Home extends Component {
               For this aim, we will continue to research and endeavour to improve its teaching methods and materials.</p>
             </div>
           </div>
-          <div className="container-fluid block-row">
-            <div className="container">
-            </div>
+          <div className="container-fluid block-row bg-abacus2">
           </div>
           <div
             onMouseEnter={()=>{this.setState({ section: 3 })}}
@@ -108,9 +106,11 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          <div className="container-fluid block-row bg-abacus6">
+          </div>
           <div
             onMouseEnter={()=>{this.setState({ section: 4 })}}
-            id="4" className="container-fluid block-row slope-open-right_white bg-white color-grey"
+            id="4" className="container-fluid block-row slope-open-left bg-white color-grey"
           >
             <div className="container pt-5">
               <br />

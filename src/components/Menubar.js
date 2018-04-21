@@ -17,7 +17,8 @@ export default class Menubar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      width: window.innerWidth
     }
   }
 
@@ -25,11 +26,21 @@ export default class Menubar extends Component {
     this.setState({
       isOpen: !this.state.isOpen
     },()=>{
-      if(this.state.isOpen){
-        window.scrollTo(0,0)
-      }
+      window.scrollTo(0,0)
     });
   }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth });
+  };
 
   render() {
     return (
@@ -49,8 +60,8 @@ export default class Menubar extends Component {
           </div>
         </div>
         {
-          this.state.isOpen&&
-          <div className="menubar-modal" ref={node=>this.node = node}>
+          (this.state.width < 660)&&this.state.isOpen&&
+          <div className="menubar-modal">
             <Nav className="m-auto" navbar>
               <NavItem className="menubar-item focus-in-contract-bck">
                 <Link onClick={this.toggle} to="/">Home</Link>

@@ -35,10 +35,10 @@ class Course extends Component {
           <div 
             id="0"
             onMouseEnter={()=>{this.setState({ section: 0 })}}
-            className="container-fluid block-row">
+            className="container-fluid block-row bg-abacus3">
             <div className="container">
               <div className="title-area">
-                <h1 className="display-3">Course</h1>
+                <h1 className="display-4">Course</h1>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ class Course extends Component {
               </ul>
             </div>
           </div>
-          <div className="container-fluid block-row bg-abacus1">
+          <div className="container-fluid block-row bg-abacus4">
           </div>
           <div
             onMouseEnter={()=>{this.setState({ section: 2 })}}
@@ -65,6 +65,9 @@ class Course extends Component {
           >
             <div className="container">
               <h3>Online Video Classes</h3>
+              <div>
+                <img className="float-right m-2" style={{maxWidth: "95%"}} src={require('../assets/videoclass.jpg')} alt="expression diagram" />
+              </div>
               <ul className="list">
                 <li className="list-item"><span className="bullet-point"></span>Small Group (up to 10 students per session)​​</li>
                 <li className="list-item"><span className="bullet-point"></span>Video call session (WebRTC technology)</li>
@@ -75,10 +78,9 @@ class Course extends Component {
                 <li className="list-item"><span className="bullet-point"></span>A parent/guardian should accompany the child during the session and assist with their learning.</li>
                 <li className="list-item"><span className="bullet-point"></span>Currently available only on every Tuesday (5:30pm-6:30pm) - limited availablity.</li>
               </ul>
-              <p>Please feel free to contact us if you need further information.</p>
             </div>
           </div>
-          <div className="container-fluid block-row">
+          <div className="container-fluid block-row bg-abacus5">
             <div className="container">
             </div>
           </div>
@@ -103,7 +105,7 @@ class Course extends Component {
           <div
             onMouseEnter={()=>{this.setState({ section: 4 })}}
             id="4"
-            className="container-fluid block-row">
+            className="container-fluid block-row bg-abacus">
             <div className="container">
               <br />
               <p className="lead">© 2018 by Abacus Maths Learning Course. All rights reserved.</p>
