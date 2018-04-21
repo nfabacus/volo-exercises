@@ -8,6 +8,10 @@ class Abacus extends Component {
       section: 0
     }
 
+    componentDidMount(){
+      window.scrollTo(0,0)
+    }
+
     handleScrollClick=()=>{
       console.log("Clicked!", this.state.section)
       const nextSection = this.state.section>=3?0:this.state.section+1
@@ -19,7 +23,7 @@ class Abacus extends Component {
     render() {
       console.log("this.state.section>>", this.state.section)
       return (
-        <div className="bg-abacus1">
+        <div>
           <div className="text-center arrow-group" onClick={this.handleScrollClick}>
             <div className="circle">
               <span className={ this.state.section>=3?"up-arrow":"down-arrow" } >
@@ -35,7 +39,7 @@ class Abacus extends Component {
           <div 
             id="0"
             onMouseEnter={()=>{this.setState({ section: 0 })}}
-            className="container-fluid block-row">
+            className="container-fluid block-row bg-abacus1">
             <div className="container">
               <div className="title-area">
                 <h1 className="display-4">The Soroban Abacus</h1>
@@ -53,7 +57,7 @@ class Abacus extends Component {
               <p>Today, the soroban abacus is taught in schools and after-school programmes in many parts of Asia, including Japan, China, Taiwan, Malaysia, Singapore, and India. It has also been introduced to Western countries in recent years.​</p>
             </div>
           </div>
-          <div className="container-fluid block-row bg-abacus1">
+          <div className="container-fluid block-row bg-abacus7">
           </div>
           <div
             onMouseEnter={()=>{this.setState({ section: 2 })}}
@@ -70,7 +74,7 @@ class Abacus extends Component {
           <div
             onMouseEnter={()=>{this.setState({ section: 3 })}}
             id="3"
-            className="container-fluid block-row">
+            className="container-fluid block-row bg-abacus1">
             <div className="container">
               <br />
               <p className="lead">© 2018 by Abacus Maths Learning Course. All rights reserved.</p>

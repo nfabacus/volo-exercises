@@ -8,6 +8,10 @@ class Home extends Component {
       section: 0
     }
 
+    componentDidMount(){
+      window.scrollTo(0,0)
+    }
+
     handleScrollClick=()=>{
       console.log("Clicked!", this.state.section)
       const nextSection = this.state.section>=5?0:this.state.section+1
@@ -19,7 +23,7 @@ class Home extends Component {
     render() {
       console.log("this.state.section>>", this.state.section)
       return (
-        <div className="bg-abacus">
+        <div>
           <div className="text-center arrow-group" onClick={this.handleScrollClick}>
             <div className="circle">
               <span className={ this.state.section>=5?"up-arrow":"down-arrow" } >
@@ -35,7 +39,7 @@ class Home extends Component {
           <div 
             id="0"
             onMouseEnter={()=>{this.setState({ section: 0 })}}
-            className="container-fluid block-row pb-5">
+            className="container-fluid block-row bg-abacus pb-5 pt-5">
             <div className="container">
               <div className="jumbotron title-area">
                 <h1 className="display-4">Abacus Learning Lab</h1>
@@ -107,6 +111,8 @@ class Home extends Component {
             </div>
           </div>
           <div className="container-fluid block-row bg-abacus6">
+          <div className="container">
+            </div>
           </div>
           <div
             onMouseEnter={()=>{this.setState({ section: 4 })}}
@@ -131,7 +137,7 @@ class Home extends Component {
           <div
             onMouseEnter={()=>{this.setState({ section: 5 })}}
             id="5"
-            className="container-fluid block-row">
+            className="container-fluid block-row bg-abacus">
             <div className="container">
               <br />
               <p className="lead">© 2018 by Abacus Maths Learning Course. All rights reserved.</p>

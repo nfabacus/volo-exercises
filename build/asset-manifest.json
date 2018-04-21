@@ -1,10 +1,19 @@
 {
-  "main.css": "static/css/main.d5ca40fa.css",
-  "main.css.map": "static/css/main.d5ca40fa.css.map",
-  "main.js": "static/js/main.a3e0d7c0.js",
-  "main.js.map": "static/js/main.a3e0d7c0.js.map",
+  "main.css": "static/css/main.8b8c65d4.css",
+  "main.css.map": "static/css/main.8b8c65d4.css.map",
+  "main.js": "static/js/main.cc6210bd.js",
+  "main.js.map": "static/js/main.cc6210bd.js.map",
   "static\\media\\abacus.jpg": "static/media/abacus.6d85c6f9.jpg",
   "static\\media\\abacus1.jpg": "static/media/abacus1.9ff68d32.jpg",
   "static\\media\\abacus2.jpg": "static/media/abacus2.1c1e8666.jpg",
-  "static\\media\\expressions.jpg": "static/media/expressions.2acaf0e5.jpg"
+  "static\\media\\abacus3.jpg": "static/media/abacus3.e9167a76.jpg",
+  "static\\media\\abacus_teacher.jpg": "static/media/abacus_teacher.26216784.jpg",
+  "static\\media\\abacuskid_kid_with_pc-min.jpg": "static/media/abacuskid_kid_with_pc-min.21d0711e.jpg",
+  "static\\media\\abacuskid_kid_with_tablet-min.jpg": "static/media/abacuskid_kid_with_tablet-min.bb38477d.jpg",
+  "static\\media\\abacuskid_kid_with_tablet2-min.jpg": "static/media/abacuskid_kid_with_tablet2-min.c114e37f.jpg",
+  "static\\media\\abacuskids-min.jpg": "static/media/abacuskids-min.99fc6b1b.jpg",
+  "static\\media\\background1.jpg": "static/media/background1.866aaea5.jpg",
+  "static\\media\\expressions.jpg": "static/media/expressions.2acaf0e5.jpg",
+  "static\\media\\kimie_sensei.jpg": "static/media/kimie_sensei.4a02d655.jpg",
+  "static\\media\\videoclass.jpg": "static/media/videoclass.0fabaa38.jpg"
 }

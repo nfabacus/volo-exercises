@@ -8,6 +8,10 @@ class Course extends Component {
       section: 0
     }
 
+    componentDidMount(){
+      window.scrollTo(0,0)
+    }
+
     handleScrollClick=()=>{
       console.log("Clicked!", this.state.section)
       const nextSection = this.state.section>=4?0:this.state.section+1
@@ -105,7 +109,7 @@ class Course extends Component {
           <div
             onMouseEnter={()=>{this.setState({ section: 4 })}}
             id="4"
-            className="container-fluid block-row bg-abacus">
+            className="container-fluid block-row bg-abacus3">
             <div className="container">
               <br />
               <p className="lead">© 2018 by Abacus Maths Learning Course. All rights reserved.</p>

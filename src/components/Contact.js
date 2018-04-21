@@ -7,6 +7,10 @@ class Contact extends Component {
     state={
       section: 0
     }
+    
+    componentDidMount(){
+      window.scrollTo(0,0)
+    }
 
     handleScrollClick=()=>{
       console.log("Clicked!", this.state.section)
@@ -19,7 +23,7 @@ class Contact extends Component {
     render() {
       console.log("this.state.section>>", this.state.section)
       return (
-        <div className="bg-contact">
+        <div>
           <div className="text-center arrow-group" onClick={this.handleScrollClick}>
             <div className="circle">
               <span className={ this.state.section>=3?"up-arrow":"down-arrow" } >
@@ -35,7 +39,7 @@ class Contact extends Component {
           <div 
             id="0"
             onMouseEnter={()=>{this.setState({ section: 0 })}}
-            className="container-fluid block-row">
+            className="container-fluid block-row bg-contact">
             <div className="container">
               <div className="title-area">
                 <h1 className="display-4">Contact us</h1>
@@ -74,7 +78,7 @@ class Contact extends Component {
           <div
             onMouseEnter={()=>{this.setState({ section: 3 })}}
             id="3"
-            className="container-fluid block-row">
+            className="container-fluid block-row bg-contact">
             <div className="container">
               <br />
               <p className="lead">© 2018 by Abacus Maths Learning Course. All rights reserved.</p>
