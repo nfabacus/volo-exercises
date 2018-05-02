@@ -43,27 +43,14 @@
 }
 /*------------------*/
 
-/* ripple effect */
-.ripple {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.ripple-circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 99px;
-  position: absolute;
-  border: 1px solid green;
-}
 
 /* menubar */
 .menubar {
   width: 100%;
   height: 50px;
   position:fixed;
-  color: white;
-  background:rgba(222, 226, 230, 0.8);
+  color: #F9623D;
+  background:white;
   padding-left: 0px;
   padding-right: 0px;
   z-index:2;
@@ -77,17 +64,19 @@ a.menubar-link-item {
   padding: 10px 3% 10px 3%;
   font-size: 20px;
   text-decoration: none;
-  color: blueviolet;
+  color: #F9623D;
   margin: 4%;
 }
 a.menubar-link-item:hover {
   background-color: rgba(248, 249, 250, 0.5);
   box-shadow: 5px 2px 5px #00000036;
+  border-bottom: 4px solid #F9623D;
   transition: background-color 1s, box-shadow 1s;
 }
 a.menubar-link-item:focus {
   background-color: rgba(248, 249, 250, 0.5);
   box-shadow: 5px 2px 5px #00000036;
+  border-bottom: 4px solid #F9623D;
   transition: background-color 1s, box-shadow 1s;
 }
 
@@ -117,7 +106,7 @@ a.menubar-link-item:focus {
 }
 
 .hamburger span:nth-child(1) {
-  border: 2px solid blueviolet;
+  border: 2px solid #F9623D;
   position: absolute;
   top: 0px;
   left: 0;
@@ -125,7 +114,7 @@ a.menubar-link-item:focus {
 }
 
 .hamburger span:nth-child(2) {
-  border: 2px solid blueviolet;
+  border: 2px solid #F9623D;
   position: absolute;
   top: 13px;
   left: 0;
@@ -133,7 +122,7 @@ a.menubar-link-item:focus {
 }
 
 .hamburger span:nth-child(3) {
-  border: 2px solid blueviolet;
+  border: 2px solid #F9623D;
   position: absolute;
   top: 27px;
   left: 0;
@@ -141,7 +130,7 @@ a.menubar-link-item:focus {
 }
 
 .cross span:nth-child(1) {
-  border: 2px solid blueviolet;
+  border: 2px solid #F9623D;
   position: absolute;
   top: 15px;
   left: -8px;
@@ -150,7 +139,7 @@ a.menubar-link-item:focus {
 }
 
 .cross span:nth-child(2) {
-  border: 2px solid blueviolet;
+  border: 2px solid #F9623D;
   position: absolute;
   top: 15px;
   left: -7px;
@@ -207,7 +196,7 @@ a.menubar-link-item:focus {
 
 .menubar-item a {
   text-decoration: none;
-  color: blueviolet;
+  color: #F9623D;
 }
 
 .menubar-modal {
@@ -220,8 +209,6 @@ a.menubar-link-item:focus {
   padding:10%;
   animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-
 
 
 /**
@@ -302,55 +289,13 @@ a.menubar-link-item:focus {
 
 
 /*----block-row------*/
-.block-row, .slope-open-right {
+.block-row {
   min-height: 400px;
   display: flex;
   align-items: center;
   text-align: left;
   padding: 80px 0;
   position:relative;
-}
-
-.slope-open-right:before {
-  content: '';
-  position: absolute;
-  border-bottom: 100px solid blueviolet;
-  border-left: 100vw solid transparent;
-  top: -100px;
-}
-.slope-open-right:after {
-  content: '';
-  position: absolute;
-  border-top: 100px solid blueviolet;
-  border-left: 100vw solid transparent;
-  bottom: -100px;
-  z-index: 1;
-  right: 0;
-}
-
-.slope-open-right_white:after {
-  content: '';
-  position: absolute;
-  border-top: 100px solid white;
-  border-right: 100vw solid transparent;
-  bottom: -100px;
-  z-index:1;
-}
-
-.slope-open-left:before {
-  content: '';
-  position: absolute;
-  border-bottom: 100px solid white;
-  border-right: 100vw solid transparent;
-  top: -100px;
-}
-.slope-open-left:after {
-  content: '';
-  position: absolute;
-  border-top: 100px solid white;
-  border-right: 100vw solid transparent;
-  bottom: -100px;
-  z-index:1;
 }
 
 .list {
@@ -386,8 +331,8 @@ a.menubar-link-item:focus {
   background-color: #17171745;
 }
 
-.bg-blueviolet {
-  background-color: blueviolet;
+.bg-#F9623D {
+  background-color: #F9623D;
 }
 
 .bg-white {
@@ -398,150 +343,30 @@ a.menubar-link-item:focus {
   background-color: transparent;
 }
 
-.bg-abacus {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: sans-serif;
-  background-image: url("./assets/abacus.jpg");
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	margin: 0%;
-  color:white;
-  position:relative;
-}
-
-.bg-abacus1 {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: sans-serif;
-  background-image: url("./assets/abacus1.jpg");
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	margin: 0%;
-  color:white;
-  position:relative;
-}
-
-.bg-abacus2 {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: sans-serif;
-  background-image: url("./assets/abacus2.jpg");
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	margin: 0%;
-  color:white;
-  position:relative;
-}
-
-.bg-abacus3 {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: sans-serif;
-  background-image: url("./assets/abacuskid_kid_with_tablet-min.jpg");
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	margin: 0%;
-  color:white;
-  position:relative;
-}
-
-.bg-abacus4 {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: sans-serif;
-  background-image: url("./assets/abacuskid_kid_with_tablet2-min.jpg");
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	margin: 0%;
-  color:white;
-  position:relative;
-}
-
-.bg-abacus5 {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: sans-serif;
-  background-image: url("./assets/abacuskid_kid_with_pc-min.jpg");
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	margin: 0%;
-  color:white;
-  position:relative;
-}
-
-.bg-abacus6 {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: sans-serif;
-  background-image: url("./assets/abacuskids-min.jpg");
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	margin: 0%;
-  color:white;
-  position:relative;
-}
-
-.bg-abacus7 {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: sans-serif;
-  background-image: url("./assets/abacus3.jpg");
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	margin: 0%;
-  color:white;
-  position:relative;
-}
-
 .bg-contact {
   margin:0;
   padding:0;
   height:100%;
   font-family: sans-serif;
-  background-image: url("./assets/background1.jpg");
+  background-image: url("./assets/shop.jpg");
 	background-position: center;
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: inherit;
 	background-repeat: no-repeat;
 	margin: 0%;
   color:white;
   position:relative;
 }
 
-.bg-instructor {
+.bg-order {
   margin:0;
   padding:0;
   height:100%;
   font-family: sans-serif;
-  background-image: url("./assets/kimie_sensei.jpg");
+  background-image: url("./assets/ecommerce.jpg");
 	background-position: center;
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: inherit;
 	background-repeat: no-repeat;
 	margin: 0%;
   color:white;
@@ -550,9 +375,4 @@ a.menubar-link-item:focus {
 
 /*----------------------------*/
 
-/*--------Font colors --------*/
-.color-grey {
-  color: grey;
-}
-/*---------------------------*/
 

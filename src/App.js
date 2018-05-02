@@ -1,23 +1,26 @@
 import React, { Component } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import Header from './components/Header'
+import { Provider } from 'react-redux'
+
 import Menubar from './components/Menubar'
 import Main from './components/Main'
-import { ParallaxProvider } from 'react-scroll-parallax'
 
+import store from './store'
+
+import 'react-datepicker/dist/react-datepicker.css'
 import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <ParallaxProvider>
-      <BrowserRouter>
-        <div className="App">
-          <Menubar />
-          <Main />
-        </div>
-      </BrowserRouter>
-      </ParallaxProvider>
+      <Provider store={store}>
+        <BrowserRouter>
+          <div className="App">
+            <Menubar />
+            <Main />
+          </div>
+        </BrowserRouter>
+      </Provider>
     )
   }
 }

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Redirect, Switch } from 'react-router-dom'
-import Home from './Home'
-import Course from './Course'
-import Abacus from './Abacus'
+import Orders from './Orders'
 import Contact from './Contact'
 
 class Main extends Component {
@@ -10,11 +8,9 @@ class Main extends Component {
     return (
       <div className="main">
         <Switch>
-          <Route exact path="/course" component={ Course } />
-          <Route exact path="/abacus" component={ Abacus } />
           <Route exact path="/contact" component={ Contact } />
-          <Route exact path="/" component={ Home } />
-          <Redirect to="/" component={ Home } />
+          <Route exact path="/" component={ Orders } />
+          <Redirect to="/" component={ Orders } />
         </Switch>
       </div>
     )

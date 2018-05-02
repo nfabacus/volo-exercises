@@ -1,17 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+} from 'reactstrap'
 
 export default class Menubar extends Component {
   constructor(props) {
@@ -64,13 +59,10 @@ export default class Menubar extends Component {
           <div className="menubar-modal">
             <Nav className="m-auto" navbar>
               <NavItem className="menubar-item focus-in-contract-bck">
-                <Link onClick={this.toggle} to="/">Home</Link>
+                <a href="https://www.volocommerce.com/">Volo</a>
               </NavItem>
               <NavItem className="menubar-item focus-in-contract-bck">
-                <Link  onClick={this.toggle} to="/course">Course</Link>
-              </NavItem>
-              <NavItem className="menubar-item focus-in-contract-bck">
-                <Link  onClick={this.toggle} to="/abacus">Abacus</Link>
+                <Link onClick={this.toggle} to="/">Orders</Link>
               </NavItem>
               <NavItem className="menubar-item focus-in-contract-bck">
                 <Link  onClick={this.toggle} to="/contact">Contact</Link>
@@ -80,9 +72,8 @@ export default class Menubar extends Component {
         }
         <div className="menubar">
             <div className="menubar-link-group">
-                <Link className="menubar-link-item" to="/">Home</Link>
-                <Link className="menubar-link-item" to="/course">Course</Link>
-                <Link className="menubar-link-item" to="/abacus">Abacus</Link>
+                <a className="menubar-link-item" href="https://www.volocommerce.com/">Volo</a>
+                <Link className="menubar-link-item" to="/">Orders</Link>
                 <Link className="menubar-link-item" to="/contact">Contact</Link>
             </div>
         </div>
