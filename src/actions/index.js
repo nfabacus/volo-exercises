@@ -1,12 +1,18 @@
-import { GET_ORDERS_REQUEST, GET_ORDERS_SUCCESS, GET_ORDERS_FAILURE } from './types'
+import { 
+  GET_ORDERS_REQUEST, GET_ORDERS_SUCCESS, GET_ORDERS_FAILURE,
+  UPDATE_ORDER_STATUS_REQUEST,
+  UPDATE_ORDER_STATUS_SUCCESS,
+  UPDATE_ORDER_STATUS_FAILURE 
 
-export const getOrders=(startDate, endDate, isPaidOnly)=>{
+} from './types'
+
+export const getOrders=({ PageNumber, EntriesPerPage, PaidOnly, StartDate, EndDate })=>{
   return (dispatch)=>{
     dispatch({
       type: GET_ORDERS_REQUEST
     })
 
-    fetch(`http://user-experience1.esellerpro.com/eSellerProAPI/services/api/rs/v2/orders?StartDate=${startDate}&EndDate=${endDate}&PaidOnly=${isPaidOnly}`, {
+    fetch(`http://user-experience1.esellerpro.com/eSellerProAPI/services/api/rs/v2/orders?PageNumber=${PageNumber}&EntriesPerPage=${EntriesPerPage}&StartDate=${StartDate}&EndDate=${EndDate}&PaidOnly=${PaidOnly}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -17,11 +23,12 @@ export const getOrders=(startDate, endDate, isPaidOnly)=>{
     })
     .then(response=>response.json())
     .then(results=>{
-      console.log("response results!!!", results)
-      const { Order } = results.OutgoingOrders
+      const { OutgoingOrders:{Order}, PaginationResult } = results
+      
       dispatch({
         type: GET_ORDERS_SUCCESS,
-        orders: Order
+        orders: Order?Order:[],
+        paginationResult: PaginationResult?PaginationResult:{}
       })
     })
     .catch(err=>{
@@ -30,5 +37,53 @@ export const getOrders=(startDate, endDate, isPaidOnly)=>{
         type: GET_ORDERS_FAILURE
       })
     })
+  }
+}
+
+
+export const updateOrderStatus=()=>{
+  return (dispatch)=>{
+    dispatch({
+      type: UPDATE_ORDER_STATUS_REQUEST
+    })
+
+    const orderUpdateObj = {
+      "OrderUpdate": [
+        {
+          "ESPOrderNo":2147483647324,
+          "OrderStatus": "DELIVERED"
+        }
+      ]
+   }
+   
+
+    fetch(`http://user-experience1.esellerpro.com/eSellerProAPI/services/api/rs/orders`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Basic aW50ZXJ2aWV3Lk5vYnk6bm9ieQ=='
+      },
+      mode: 'cors',
+      body: JSON.stringify(orderUpdateObj)
+    })
+    .then(response=>{
+      if (response.status === 400) {
+        console.log("Error 400!")
+        dispatch({
+          type: UPDATE_ORDER_STATUS_FAILURE
+        })
+        response.json().then((results)=>{
+        })
+      } else {
+        response.json().then((result)=>{
+          console.log("Success!")
+          dispatch({
+            type: UPDATE_ORDER_STATUS_SUCCESS
+          })
+        })
+      }
+    })
+
   }
 }

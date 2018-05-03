@@ -228,6 +228,21 @@ a.menubar-link-item:focus {
 }
 
 /* main */
+
+.modal-width {
+  min-width: 60%;
+}
+
+.order-list-item:hover {
+  background-color: #F9623D;
+  color: white;
+}
+
+.order-list-item:active {
+  background-color: #F9623D;
+  color: white;
+}
+
 .title-area {
   background-color: transparent;
 }
@@ -241,50 +256,6 @@ a.menubar-link-item:focus {
 
 .container-fluid {
   padding:0;
-}
-
-.arrow-group {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.circle {
-  position: fixed;
-  bottom: 20px;
-  width: 45px;
-  height: 45px;
-  border-radius: 30px;
-  background-color: rgba(0, 123, 255, 0.5490196078431373);
-  z-index: 2;
-}
-
-.down-arrow {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box;
-}
-
-.up-arrow {
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-right: 1px solid white;
-  border-top: 1px solid white;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box;
 }
 
 

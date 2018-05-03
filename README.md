@@ -1,8 +1,8 @@
-# Abacus Maths Learning Site - Client
+# Volo Exercises
 
 Site currently published at the below temporary address:
 ```
-https://abacuslearninglab.now.sh/
+
 ```
 
 

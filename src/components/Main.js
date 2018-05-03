@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Redirect, Switch } from 'react-router-dom'
-import Orders from './Orders'
+import Orders from './Orders/Orders'
 import Contact from './Contact'
 
 class Main extends Component {
